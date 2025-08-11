@@ -14,8 +14,8 @@ interface CategoryConfig {
   gradient: string;
 }
 
-const categoryConfigs: Record<keyof PredictionResult['predictions'], CategoryConfig> = {
-  parent_subject: {
+const categoryConfigs: Record<string, CategoryConfig> = {
+  parent: {
     title: 'Parent Subject',
     icon: Tags,
     gradient: 'from-primary/20 to-primary/5',
