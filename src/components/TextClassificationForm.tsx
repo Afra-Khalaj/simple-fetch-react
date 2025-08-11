@@ -49,8 +49,7 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
     try {
-      // Replace with your actual API endpoint
-      const response = await axios.post<PredictionResult>('/api/classify', {
+      const response = await axios.post<PredictionResult>('http://192.168.5.146:1333/classify', {
         text: data.text,
       });
       
@@ -118,7 +117,7 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
                 </FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="لطفاً درباره درخواست خدمات شهری راهنمایی کنید"
+                    placeholder="Enter your text here"
                     className="min-h-[120px] bg-background/50 border-border focus:ring-primary"
                     {...field}
                   />
