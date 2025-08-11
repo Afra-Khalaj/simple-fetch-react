@@ -1,16 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/hooks/redux';
 import { fetchUsers } from '@/store/slices/usersSlice';
 import { UserCard } from '@/components/UserCard';
 import { LoadingCard } from '@/components/LoadingCard';
+import TextClassificationForm, { type PredictionResult } from '@/components/TextClassificationForm';
+import PredictionResults from '@/components/PredictionResults';
 import { Button } from '@/components/ui/button';
-import { RefreshCw, Users } from 'lucide-react';
+import { RefreshCw, Users, Brain } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
   const dispatch = useAppDispatch();
   const { users, loading, error } = useAppSelector((state) => state.users);
   const { toast } = useToast();
+  const [predictionResults, setPredictionResults] = useState<PredictionResult | null>(null);
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -34,6 +37,10 @@ const Index = () => {
     });
   };
 
+  const handlePredictionSubmit = (results: PredictionResult) => {
+    setPredictionResults(results);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -42,17 +49,17 @@ const Index = () => {
         <div className="relative container mx-auto px-6 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
-              <Users className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Redux + Axios Demo</span>
+              <Brain className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">AI Text Classification</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">User Directory</span>
+              <span className="gradient-text">Text Classifier</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              A beautiful React landing page showcasing Redux state management 
-              and Axios API integration with real user data.
+              Advanced AI-powered text classification system with real-time predictions 
+              for subject categorization and organization mapping.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -83,8 +90,30 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Users Grid */}
+      {/* Text Classification Section */}
       <div className="container mx-auto px-6 py-16">
+        <div className="max-w-2xl mx-auto mb-12">
+          <TextClassificationForm onSubmit={handlePredictionSubmit} />
+        </div>
+        
+        {predictionResults && (
+          <div className="mb-16">
+            <PredictionResults results={predictionResults} />
+          </div>
+        )}
+      </div>
+
+      {/* Users Grid */}
+      <div className="container mx-auto px-6 py-16 border-t border-border/20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">
+            <span className="gradient-text">User Directory</span>
+          </h2>
+          <p className="text-muted-foreground mb-8">
+            Redux state management demonstration with user data
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {loading ? (
             Array.from({ length: 6 }).map((_, index) => (
@@ -118,7 +147,7 @@ const Index = () => {
       <footer className="border-t border-border/50 mt-20">
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-muted-foreground">
-            <p>Built with React, Redux Toolkit, Axios, and Tailwind CSS</p>
+            <p>Built with React, Redux Toolkit, Axios, React Hook Form, and Tailwind CSS</p>
           </div>
         </div>
       </footer>
