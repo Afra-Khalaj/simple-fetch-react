@@ -25,7 +25,7 @@ type FormData = z.infer<typeof formSchema>;
 
 export interface PredictionResult {
   predictions: {
-    parent_subject: Array<{ label: string; probability: number }>;
+    parent: Array<{ label: string; probability: number }>;
     subject: Array<{ label: string; probability: number }>;
     organization: Array<{ label: string; probability: number }>;
   };
@@ -49,7 +49,7 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
     try {
-      const response = await axios.post<PredictionResult>('http://192.168.5.146:1333/classify', {
+      const response = await axios.post<PredictionResult>('https://request-classification.farazpardazan.com/classify', {
         text: data.text,
       });
       
@@ -65,7 +65,7 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
       // Mock response for demo purposes
       const mockResponse: PredictionResult = {
         predictions: {
-          parent_subject: [
+          parent: [
             {"label": "شهرداری", "probability": 0.65},
             {"label": "حمل و نقل", "probability": 0.2},
             {"label": "بهداشت", "probability": 0.1},
