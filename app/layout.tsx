@@ -6,8 +6,8 @@ import Providers from '@/components/Providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Text Classification App',
-  description: 'A Next.js application for text classification',
+  title: 'اپلیکیشن طبقه‌بندی متن',
+  description: 'یک اپلیکیشن Next.js برای طبقه‌بندی متن',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className={inter.className}>
         <Providers>
           {children}

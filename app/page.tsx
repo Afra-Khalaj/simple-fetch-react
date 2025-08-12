@@ -7,6 +7,7 @@ import TextClassificationForm, {
   type PredictionResult,
 } from "@/components/TextClassificationForm";
 import PredictionResults from "@/components/PredictionResults";
+import Header from "@/components/Header";
 import { useToast } from "@/hooks/use-toast";
 
 export default function HomePage() {
@@ -19,7 +20,7 @@ export default function HomePage() {
   useEffect(() => {
     if (error) {
       toast({
-        title: "Error",
+        title: "خطا",
         description: error,
         variant: "destructive",
       });
@@ -32,6 +33,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Header />
+      
       <div className="container mx-auto px-6 py-16 flex-1">
         <div className="max-w-2xl mx-auto mb-12">
           <TextClassificationForm onSubmit={handlePredictionSubmit} />
@@ -48,7 +51,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-muted-foreground">
             <p>
-              Built with Next.js, Redux Toolkit, Axios, React Hook Form, and
+              ساخته شده با Next.js، Redux Toolkit، Axios، React Hook Form و
               Tailwind CSS
             </p>
           </div>

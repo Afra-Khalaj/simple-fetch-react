@@ -1,100 +1,100 @@
-# Text Classification App
+# اپلیکیشن طبقه‌بندی متن
 
-A Next.js application for text classification built with modern web technologies.
+یک اپلیکیشن Next.js برای طبقه‌بندی متن با استفاده از فناوری‌های مدرن وب.
 
-## Features
+## ویژگی‌ها
 
-- Text classification using AI/ML models
-- Real-time prediction results
-- Modern UI with Tailwind CSS and shadcn/ui
-- Redux Toolkit for state management
-- React Hook Form for form handling
-- TypeScript for type safety
+- طبقه‌بندی متن با استفاده از مدل‌های هوش مصنوعی/یادگیری ماشین
+- نتایج پیش‌بینی در زمان واقعی
+- رابط کاربری مدرن با Tailwind CSS و shadcn/ui
+- Redux Toolkit برای مدیریت state
+- React Hook Form برای مدیریت فرم‌ها
+- TypeScript برای امنیت نوع داده
 
-## Tech Stack
+## فناوری‌های استفاده شده
 
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **State Management**: Redux Toolkit
-- **Forms**: React Hook Form with Zod validation
-- **HTTP Client**: Axios
-- **TypeScript**: Full type safety
+- **فریم‌ورک**: Next.js 14
+- **استایل‌دهی**: Tailwind CSS
+- **کامپوننت‌های UI**: shadcn/ui
+- **مدیریت state**: Redux Toolkit
+- **فرم‌ها**: React Hook Form با اعتبارسنجی Zod
+- **کلاینت HTTP**: Axios
+- **TypeScript**: امنیت کامل نوع داده
 
-## Getting Started
+## شروع کار
 
-### Prerequisites
+### پیش‌نیازها
 
 - Node.js 18+ 
-- npm, yarn, or pnpm
+- npm، yarn، یا pnpm
 
-### Installation
+### نصب
 
-1. Clone the repository:
+1. کلون کردن مخزن:
 ```bash
 git clone <repository-url>
 cd simple-fetch-react
 ```
 
-2. Install dependencies:
+2. نصب وابستگی‌ها:
 ```bash
 npm install
-# or
+# یا
 yarn install
-# or
+# یا
 pnpm install
 ```
 
-3. Run the development server:
+3. اجرای سرور توسعه:
 ```bash
 npm run dev
-# or
+# یا
 yarn dev
-# or
+# یا
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. باز کردن [http://localhost:3000](http://localhost:3000) در مرورگر.
 
-## Available Scripts
+## اسکریپت‌های موجود
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run dev` - شروع سرور توسعه
+- `npm run build` - ساخت برای تولید
+- `npm run start` - شروع سرور تولید
+- `npm run lint` - اجرای ESLint
 
-## Project Structure
+## ساختار پروژه
 
 ```
 ├── app/                    # Next.js App Router
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Home page
-│   └── globals.css        # Global styles
+│   ├── layout.tsx         # لایوت اصلی
+│   ├── page.tsx           # صفحه اصلی
+│   └── globals.css        # استایل‌های عمومی
 ├── src/
-│   ├── components/        # React components
-│   ├── hooks/            # Custom hooks
-│   ├── lib/              # Utility functions
-│   └── store/            # Redux store
-├── public/               # Static assets
-└── package.json          # Dependencies and scripts
+│   ├── components/        # کامپوننت‌های React
+│   ├── hooks/            # هوک‌های سفارشی
+│   ├── lib/              # توابع کمکی
+│   └── store/            # استور Redux
+├── public/               # فایل‌های استاتیک
+└── package.json          # وابستگی‌ها و اسکریپت‌ها
 ```
 
-## API Integration
+## یکپارچه‌سازی API
 
-The app integrates with a text classification API endpoint:
+این اپلیکیشن با یک endpoint طبقه‌بندی متن یکپارچه می‌شود:
 - **Endpoint**: `https://request-classification.farazpardazan.com/classify`
 - **Method**: POST
 - **Body**: `{ text: string }`
 
-## Development
+## توسعه
 
-This project uses:
-- **Next.js App Router** for routing
-- **TypeScript** for type safety
-- **ESLint** for code linting
-- **Tailwind CSS** for styling
-- **shadcn/ui** for UI components
+این پروژه از موارد زیر استفاده می‌کند:
+- **Next.js App Router** برای مسیریابی
+- **TypeScript** برای امنیت نوع داده
+- **ESLint** برای بررسی کد
+- **Tailwind CSS** برای استایل‌دهی
+- **shadcn/ui** برای کامپوننت‌های UI
 
-## License
+## مجوز
 
-This project is licensed under the MIT License.
+این پروژه تحت مجوز MIT منتشر شده است.

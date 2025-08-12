@@ -18,7 +18,7 @@ import { Loader2, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
-  text: z.string().min(1, 'Text is required'),
+  text: z.string().min(1, 'متن الزامی است'),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -56,8 +56,8 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
       onSubmit(response.data);
       
       toast({
-        title: "Success",
-        description: "Text classification completed",
+        title: "موفقیت",
+        description: "درخواست شما با موفقیت ثبت و تحلیل شد",
       });
     } catch (error) {
       console.error('Classification error:', error);
@@ -92,8 +92,8 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
       onSubmit(mockResponse);
       
       toast({
-        title: "Demo Mode",
-        description: "Showing mock classification results",
+        title: "حالت نمایشی",
+        description: "نمایش نتایج تحلیل نمونه",
         variant: "default",
       });
     } finally {
@@ -103,7 +103,7 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
 
   return (
     <div className="glass-card p-6 rounded-xl">
-      <h2 className="text-2xl font-bold mb-6 gradient-text">Text Classification</h2>
+      <h2 className="text-2xl font-bold mb-6 gradient-text">ثبت درخواست جدید</h2>
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
@@ -113,11 +113,11 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-foreground font-medium">
-                  Enter your text for classification
+                  شرح درخواست خود را وارد کنید
                 </FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Enter your text here"
+                    placeholder="درخواست خود را به صورت کامل و واضح شرح دهید..."
                     className="min-h-[120px] bg-background/50 border-border focus:ring-primary"
                     {...field}
                   />
@@ -136,12 +136,12 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
             {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Classifying...
+                در حال پردازش...
               </>
             ) : (
               <>
                 <Send className="mr-2 h-4 w-4" />
-                Classify Text
+                ثبت و طبقه‌بندی درخواست
               </>
             )}
           </Button>

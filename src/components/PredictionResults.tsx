@@ -16,17 +16,17 @@ interface CategoryConfig {
 
 const categoryConfigs: Record<string, CategoryConfig> = {
   parent: {
-    title: 'Parent Subject',
+    title: 'موضوع اصلی',
     icon: Tags,
     gradient: 'from-primary/20 to-primary/5',
   },
   subject: {
-    title: 'Subject',
+    title: 'موضوع',
     icon: Building,
     gradient: 'from-secondary/20 to-secondary/5',
   },
   organization: {
-    title: 'Organization',
+    title: 'سازمان',
     icon: Users,
     gradient: 'from-accent/20 to-accent/5',
   },
@@ -36,7 +36,7 @@ export default function PredictionResults({ results }: PredictionResultsProps) {
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold gradient-text mb-6">
-        Classification Results
+        نتایج تحلیل درخواست
       </h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
