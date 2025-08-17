@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="border-b border-border/50" style={{ backgroundColor: '#0F0F12' }}>
+    <header className="border-b border-border/50" style={{ backgroundColor: '#FAFAFB' }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex-1">
@@ -21,7 +21,7 @@ export default function Header() {
               <div className="p-2">
                 <img 
                   src="/logo.png" 
-                  alt="لوگو سامانه" 
+                  alt="System Logo" 
                   className="w-20 h-20 object-contain drop-shadow-xl"
                   style={{
                     filter: 'brightness(1.2) contrast(1.3) saturate(1.1)',
