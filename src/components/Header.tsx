@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="border-b border-border/50" style={{ backgroundColor: '#0F0F12' }}>
+    <header className="border-b border-border/50" style={{ backgroundColor: '#FAFAFB' }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex-1">
