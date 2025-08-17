@@ -119,6 +119,12 @@ export default function TextClassificationForm({ onSubmit }: TextClassificationF
                   <Textarea
                     placeholder="درخواست خود را به صورت کامل و واضح شرح دهید..."
                     className="min-h-[120px] bg-background/50 border-border focus:ring-primary"
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && !(e.shiftKey && e.key === 'Enter')) {
+                        e.preventDefault();
+                        form.handleSubmit(handleSubmit)();
+                      }
+                    }}
                     {...field}
                   />
                 </FormControl>
