@@ -6,8 +6,8 @@ import Providers from '@/components/Providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'اپلیکیشن طبقه‌بندی متن',
-  description: 'یک اپلیکیشن Next.js برای طبقه‌بندی متن',
+  title: 'سامانه ثبت درخواست‌های مردمی',
+  description: 'سامانه ثبت درخواست‌های مردمی',
 }
 
 export default function RootLayout({
