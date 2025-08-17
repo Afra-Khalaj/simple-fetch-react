@@ -51,8 +51,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-muted-foreground">
             <p>
-              ساخته شده با Next.js، Redux Toolkit، Axios، React Hook Form و
-              Tailwind CSS
+              ساخته شده توسط فرازپردازان &copy; {new Date().getFullYear()}
             </p>
           </div>
         </div>

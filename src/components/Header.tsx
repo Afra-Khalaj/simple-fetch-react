@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="border-b border-border/50" style={{ backgroundColor: '#09090B' }}>
+    <header className="border-b border-border/50" style={{ backgroundColor: '#0F0F12' }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex-1">
@@ -17,16 +17,18 @@ export default function Header() {
           </div>
           
           <div className="flex items-center">
-            <div className="relative w-16 h-16">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-700 to-blue-800 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-green-600 to-green-700 rounded-t-lg" 
-                     style={{ 
-                       clipPath: 'polygon(0 0, 100% 0, 100% 60%, 50% 80%, 0 60%)' 
-                     }}></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-700 to-blue-800 rounded-b-lg"
-                     style={{ 
-                       clipPath: 'polygon(0 60%, 50% 80%, 100% 60%, 100% 100%, 0 100%)' 
-                     }}></div>
+            <div className="relative">
+              <div className="p-2">
+                <img 
+                  src="/logo.png" 
+                  alt="لوگو سامانه" 
+                  className="w-20 h-20 object-contain drop-shadow-xl"
+                  style={{
+                    filter: 'brightness(1.2) contrast(1.3) saturate(1.1)',
+                    maxWidth: '80px',
+                    maxHeight: '80px'
+                  }}
+                />
               </div>
             </div>
           </div>
