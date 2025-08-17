@@ -20,7 +20,7 @@ export default function HomePage() {
   useEffect(() => {
     if (error) {
       toast({
-        title: "خطا",
+        title: "Error",
         description: error,
         variant: "destructive",
       });

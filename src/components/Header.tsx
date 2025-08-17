@@ -21,7 +21,7 @@ export default function Header() {
               <div className="p-2">
                 <img 
                   src="/logo.png" 
-                  alt="لوگو سامانه" 
+                  alt="System Logo" 
                   className="w-20 h-20 object-contain drop-shadow-xl"
                   style={{
                     filter: 'brightness(1.2) contrast(1.3) saturate(1.1)',

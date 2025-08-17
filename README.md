@@ -1,100 +1,100 @@
-# اپلیکیشن طبقه‌بندی متن
+# Request Classification Landing
 
-یک اپلیکیشن Next.js برای طبقه‌بندی متن با استفاده از فناوری‌های مدرن وب.
+A Next.js application for text classification using modern web technologies.
 
-## ویژگی‌ها
+## Features
 
-- طبقه‌بندی متن با استفاده از مدل‌های هوش مصنوعی/یادگیری ماشین
-- نتایج پیش‌بینی در زمان واقعی
-- رابط کاربری مدرن با Tailwind CSS و shadcn/ui
-- Redux Toolkit برای مدیریت state
-- React Hook Form برای مدیریت فرم‌ها
-- TypeScript برای امنیت نوع داده
+- Text classification using AI/Machine Learning models
+- Real-time prediction results
+- Modern UI with Tailwind CSS and shadcn/ui
+- Redux Toolkit for state management
+- React Hook Form for form management
+- TypeScript for type safety
 
-## فناوری‌های استفاده شده
+## Technologies Used
 
-- **فریم‌ورک**: Next.js 14
-- **استایل‌دهی**: Tailwind CSS
-- **کامپوننت‌های UI**: shadcn/ui
-- **مدیریت state**: Redux Toolkit
-- **فرم‌ها**: React Hook Form با اعتبارسنجی Zod
-- **کلاینت HTTP**: Axios
-- **TypeScript**: امنیت کامل نوع داده
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **State Management**: Redux Toolkit
+- **Forms**: React Hook Form with Zod validation
+- **HTTP Client**: Axios
+- **TypeScript**: Full type safety
 
-## شروع کار
+## Getting Started
 
-### پیش‌نیازها
+### Prerequisites
 
 - Node.js 18+ 
-- npm، yarn، یا pnpm
+- npm, yarn, or pnpm
 
-### نصب
+### Installation
 
-1. کلون کردن مخزن:
+1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd simple-fetch-react
+cd request-classification-landing
 ```
 
-2. نصب وابستگی‌ها:
+2. Install dependencies:
 ```bash
 npm install
-# یا
+# or
 yarn install
-# یا
+# or
 pnpm install
 ```
 
-3. اجرای سرور توسعه:
+3. Run the development server:
 ```bash
 npm run dev
-# یا
+# or
 yarn dev
-# یا
+# or
 pnpm dev
 ```
 
-4. باز کردن [http://localhost:3000](http://localhost:3000) در مرورگر.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## اسکریپت‌های موجود
+## Available Scripts
 
-- `npm run dev` - شروع سرور توسعه
-- `npm run build` - ساخت برای تولید
-- `npm run start` - شروع سرور تولید
-- `npm run lint` - اجرای ESLint
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## ساختار پروژه
+## Project Structure
 
 ```
 ├── app/                    # Next.js App Router
-│   ├── layout.tsx         # لایوت اصلی
-│   ├── page.tsx           # صفحه اصلی
-│   └── globals.css        # استایل‌های عمومی
+│   ├── layout.tsx         # Main layout
+│   ├── page.tsx           # Home page
+│   └── globals.css        # Global styles
 ├── src/
-│   ├── components/        # کامپوننت‌های React
-│   ├── hooks/            # هوک‌های سفارشی
-│   ├── lib/              # توابع کمکی
-│   └── store/            # استور Redux
-├── public/               # فایل‌های استاتیک
-└── package.json          # وابستگی‌ها و اسکریپت‌ها
+│   ├── components/        # React components
+│   ├── hooks/            # Custom hooks
+│   ├── lib/              # Utility functions
+│   └── store/            # Redux store
+├── public/               # Static files
+└── package.json          # Dependencies and scripts
 ```
 
-## یکپارچه‌سازی API
+## API Integration
 
-این اپلیکیشن با یک endpoint طبقه‌بندی متن یکپارچه می‌شود:
+This application integrates with a text classification endpoint:
 - **Endpoint**: `https://request-classification.farazpardazan.com/classify`
 - **Method**: POST
 - **Body**: `{ text: string }`
 
-## توسعه
+## Development
 
-این پروژه از موارد زیر استفاده می‌کند:
-- **Next.js App Router** برای مسیریابی
-- **TypeScript** برای امنیت نوع داده
-- **ESLint** برای بررسی کد
-- **Tailwind CSS** برای استایل‌دهی
-- **shadcn/ui** برای کامپوننت‌های UI
+This project uses:
+- **Next.js App Router** for routing
+- **TypeScript** for type safety
+- **ESLint** for code linting
+- **Tailwind CSS** for styling
+- **shadcn/ui** for UI components
 
-## مجوز
+## License
 
-این پروژه تحت مجوز MIT منتشر شده است.
+This project is licensed under the MIT License.
