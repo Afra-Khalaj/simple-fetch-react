@@ -51,7 +51,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-muted-foreground">
             <p>
-              ساخته شده توسط فرازپردازان &copy; {new Date().getFullYear()}
+              توسعه داده شده توسط فرازپردازان &copy; {new Date().getFullYear()}
             </p>
           </div>
         </div>
